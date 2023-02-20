@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
+import { NextSeo } from 'next-seo';
 import Head from "next/head";
+import seo from '../seo-config';
 import About from "../components/About";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -12,6 +14,7 @@ const Index: NextPage<Props> = (): JSX.Element => {
     <>
       <Head>
         <title>{title}</title>
+        <NextSeo {...seo} />
       </Head>
 
       {/* Containers */}
